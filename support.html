@@ -7,325 +7,68 @@
   <meta name="description" content="Support für die Android-App FreizeitPass.">
   <title>FreizeitPass – Support</title>
   <style>
-    :root {
-      --bg: #f5f7fa;
-      --surface: #ffffff;
-      --text: #172033;
-      --muted: #647084;
-      --line: #dfe5ec;
-      --accent: #176b53;
-      --accent-soft: #e5f3ee;
-      --shadow: 0 16px 40px rgba(26, 39, 54, .08);
-      --radius: 20px;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f141b;
-        --surface: #171e27;
-        --text: #edf3f8;
-        --muted: #a7b3c2;
-        --line: #2b3542;
-        --accent: #70d8b6;
-        --accent-soft: #173a31;
-        --shadow: 0 18px 48px rgba(0,0,0,.28);
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
-    a { color: var(--accent); }
-    .wrap { width: min(980px, calc(100% - 32px)); margin: 0 auto; }
-    header { padding: 56px 0 26px; }
-    .hero {
-      background: linear-gradient(135deg, var(--accent-soft), var(--surface));
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: clamp(24px, 5vw, 48px);
-      box-shadow: var(--shadow);
-    }
-    h1 { margin: 0 0 10px; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.08; }
-    h2 { margin-top: 2rem; font-size: 1.35rem; }
-    h3 { margin: 0 0 5px; font-size: 1.04rem; }
-    .sub, .muted { color: var(--muted); }
-    .toolbar { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-    button, .button {
-      appearance: none;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 10px 16px;
-      background: var(--surface);
-      color: var(--text);
-      font: inherit;
-      font-weight: 650;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    button.active { background: var(--accent); color: #fff; border-color: transparent; }
-    main { padding: 0 0 56px; }
-    article {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: clamp(22px, 5vw, 44px);
-      box-shadow: var(--shadow);
-    }
-    .contact {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 14px;
-      margin: 18px 0 26px;
-    }
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 18px;
-      background: color-mix(in srgb, var(--surface) 94%, var(--accent-soft));
-    }
-    details {
-      border-top: 1px solid var(--line);
-      padding: 16px 0;
-    }
-    details:last-of-type { border-bottom: 1px solid var(--line); }
-    summary { cursor: pointer; font-weight: 700; }
-    details p, details ul { margin-bottom: 0; }
-    .lang { display: none; }
-    .lang.active { display: block; }
-    footer { color: var(--muted); padding: 0 0 50px; font-size: .9rem; }
-    footer .links { display: flex; flex-wrap: wrap; gap: 14px; }
+    :root{--bg:#f5f7fa;--surface:#fff;--text:#172033;--muted:#647084;--line:#dfe5ec;--accent:#176b53;--soft:#e5f3ee;--shadow:0 16px 40px rgba(26,39,54,.08)}
+    @media(prefers-color-scheme:dark){:root{--bg:#0f141b;--surface:#171e27;--text:#edf3f8;--muted:#a7b3c2;--line:#2b3542;--accent:#70d8b6;--soft:#173a31;--shadow:0 18px 48px rgba(0,0,0,.28)}}
+    *{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}a{color:var(--accent)}.wrap{width:min(980px,calc(100% - 32px));margin:auto}header{padding:56px 0 26px}.hero,article{background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow)}.hero{background:linear-gradient(135deg,var(--soft),var(--surface));border-radius:28px;padding:clamp(24px,5vw,48px)}article{border-radius:20px;padding:clamp(22px,5vw,44px)}h1{margin:0 0 10px;font-size:clamp(2rem,5vw,3.4rem);line-height:1.08}h2{margin-top:2rem;font-size:1.35rem}h3{margin:0 0 5px;font-size:1.04rem}.sub,.muted{color:var(--muted)}.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}button,.button{appearance:none;border:1px solid var(--line);border-radius:999px;padding:10px 16px;background:var(--surface);color:var(--text);font:inherit;font-weight:650;text-decoration:none;cursor:pointer}button.active{background:var(--accent);color:#fff;border-color:transparent}.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:18px 0 26px}.card{border:1px solid var(--line);border-radius:16px;padding:18px;background:color-mix(in srgb,var(--surface) 94%,var(--soft))}details{border-top:1px solid var(--line);padding:16px 0}details:last-of-type{border-bottom:1px solid var(--line)}summary{cursor:pointer;font-weight:700}.lang{display:none}.lang.active{display:block}main{padding-bottom:56px}footer{color:var(--muted);padding:0 0 50px;font-size:.9rem}.links{display:flex;gap:14px;flex-wrap:wrap}
   </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <div class="hero">
-      <div class="lang lang-de active">
-        <h1>FreizeitPass Support</h1>
-        <p class="sub">Hilfe, Kontakt und häufige Fragen zur Android-App.</p>
-      </div>
-      <div class="lang lang-en">
-        <h1>FreizeitPass Support</h1>
-        <p class="sub">Help, contact information and frequently asked questions for the Android app.</p>
-      </div>
-      <div class="toolbar" aria-label="Language">
-        <button type="button" id="deBtn" class="active" onclick="setLang('de')">Deutsch</button>
-        <button type="button" id="enBtn" onclick="setLang('en')">English</button>
-        <a class="button" href="privacy.html">Datenschutz / Privacy</a>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main>
-<div class="wrap">
-<article>
+<header><div class="wrap"><div class="hero">
+  <div class="lang lang-de active"><h1>FreizeitPass Support</h1><p class="sub">Hilfe, Kontakt und häufige Fragen zur Android-App.</p></div>
+  <div class="lang lang-en"><h1>FreizeitPass Support</h1><p class="sub">Help, contact information and frequently asked questions for the Android app.</p></div>
+  <div class="toolbar"><button id="deBtn" class="active" onclick="setLang('de')">Deutsch</button><button id="enBtn" onclick="setLang('en')">English</button><a class="button" href="privacy.html">Datenschutz / Privacy</a></div>
+</div></div></header>
+<main><div class="wrap"><article>
 <section class="lang lang-de active">
   <h2>Kontakt</h2>
-  <div class="contact">
-    <div class="card">
-      <h3>E-Mail-Support</h3>
-      <a href="mailto:lemmidevpixelcraft@gmail.com?subject=FreizeitPass%20Support">lemmidevpixelcraft@gmail.com</a>
-    </div>
-    <div class="card">
-      <h3>Entwickler</h3>
-      Simon Außerlechner<br>
-      Siedlerweg 17<br>
-      6402 Hatting, Österreich
-    </div>
-  </div>
-
-  <p>Bei einem technischen Problem helfen folgende Angaben, damit ich den Fehler schneller nachvollziehen kann:</p>
-  <ul>
-    <li>FreizeitPass-Version,</li>
-    <li>Android-Version und Gerätemodell,</li>
-    <li>kurze Beschreibung der Schritte bis zum Problem,</li>
-    <li>falls möglich ein Screenshot oder relevanter Logcat-Ausschnitt.</li>
-  </ul>
-  <p class="muted">Bitte sende keine Passwörter, Zahlungsdaten oder andere unnötige sensible Informationen.</p>
+  <div class="contact"><div class="card"><h3>E-Mail-Support</h3><a href="mailto:lemmidevpixelcraft@gmail.com?subject=FreizeitPass%20Support">lemmidevpixelcraft@gmail.com</a></div><div class="card"><h3>Entwickler</h3>Simon Außerlechner<br>Siedlerweg 17<br>6402 Hatting, Österreich</div></div>
+  <p>Bei einem technischen Problem helfen App-Version, Android-Version, Gerätemodell, eine kurze Schritt-für-Schritt-Beschreibung und – falls möglich – ein Screenshot oder relevanter Logcat-Ausschnitt.</p><p class="muted">Bitte sende keine Passwörter, Zahlungsdaten oder andere unnötige sensible Informationen.</p>
 
   <h2>Häufige Fragen</h2>
-
-  <details>
-    <summary>Ist FreizeitPass eine offizielle App des Freizeitticket Tirol?</summary>
-    <p>Nein. FreizeitPass ist ein unabhängiges, privates Hilfsmittel und steht in keiner Verbindung zu, ist nicht autorisiert oder gesponsert von den Betreibern des Freizeitticket Tirol. Für verbindliche Preise, Leistungen, Öffnungszeiten und Bedingungen gelten ausschließlich die offiziellen Angaben des Ticketanbieters und der jeweiligen Betriebe.</p>
-  </details>
-
-  <details>
-    <summary>Warum benötigt die App meinen Standort?</summary>
-    <p>Die Standortberechtigung ist optional und wird für Entfernungssortierung, Standortanzeige und Navigation verwendet. Ohne Standortberechtigung kann FreizeitPass weiterhin genutzt werden; lediglich standortbezogene Funktionen sind eingeschränkt.</p>
-  </details>
-
-  <details>
-    <summary>Wo werden meine Besuche, Ticketprofile und Fotos gespeichert?</summary>
-    <p>Diese Daten werden grundsätzlich lokal auf deinem Gerät gespeichert. Abhängig von deinen Android-/Google-Backup-Einstellungen kann das Betriebssystem App-Daten zusätzlich im Android-Systembackup sichern. Weitere Details findest du in der <a href="privacy.html">Datenschutzerklärung</a>.</p>
-  </details>
-
-  <details>
-    <summary>Wie lösche ich meine Daten?</summary>
-    <p>In FreizeitPass kannst du unter den Einstellungen persönliche Daten oder alle App-Daten zurücksetzen. Alternativ kannst du in den Android-Systemeinstellungen den Speicher der App löschen oder FreizeitPass deinstallieren.</p>
-  </details>
-
-  <details>
-    <summary>Die Entfernung zu Einrichtungen wird nicht angezeigt.</summary>
-    <p>Prüfe unter Android → Einstellungen → Apps → FreizeitPass → Berechtigungen, ob Standort erlaubt ist. Zusätzlich müssen die Standortdienste des Geräts aktiviert sein.</p>
-  </details>
-
-  <details>
-    <summary>Benachrichtigungen funktionieren nicht.</summary>
-    <p>Prüfe zuerst, ob Benachrichtigungen für FreizeitPass in Android erlaubt sind. Manche Hersteller beschränken Hintergrundarbeit zusätzlich über Akkuoptimierungen. Der kostenlose Morgen-Tipp und Pro-Ausflugserinnerungen können innerhalb der App getrennt konfiguriert werden.</p>
-  </details>
-
-  <details>
-    <summary>Wie stelle ich einen Pro-Kauf wieder her?</summary>
-    <p>Öffne in FreizeitPass die Einstellungen und wähle „Käufe wiederherstellen“. Verwende dabei dasselbe Google-Konto, mit dem der Kauf ursprünglich im Google Play Store durchgeführt wurde.</p>
-  </details>
-
-  <details>
-    <summary>Warum schlägt der Pro-Kauf fehl oder das Produkt ist nicht verfügbar?</summary>
-    <p>In-App-Käufe werden vollständig über Google Play abgewickelt. Prüfe Internetverbindung, Play-Store-Konto und Verfügbarkeit der App bzw. des Produkts in deinem Land. Bei Testversionen muss die App über den vorgesehenen Google-Play-Testkanal installiert sein.</p>
-  </details>
-
-  <details>
-    <summary>Wie werden Einrichtungen und Vorteilspartner aktualisiert?</summary>
-    <p>Die App enthält eine lokale Grundausstattung und kann aktualisierte Stammdaten online laden. Bei einem Problem mit dem manuellen Update sollte FreizeitPass eine Status- oder Fehlermeldung anzeigen. Bestehende persönliche Besuchsdaten bleiben davon unabhängig.</p>
-  </details>
-
-  <details>
-    <summary>Warum stimmen Preise oder Öffnungszeiten nicht?</summary>
-    <p>Einrichtungs-, Preis-, Öffnungszeit- und Leistungsinformationen können sich jederzeit ändern. FreizeitPass versucht, die Daten aktuell zu halten, kann aber keine Gewähr für deren Richtigkeit übernehmen. Verbindlich sind ausschließlich die offiziellen Angaben des jeweiligen Betriebs bzw. Ticketanbieters.</p>
-  </details>
-
-  <details>
-    <summary>Welche Daten brauche ich für eine Supportanfrage?</summary>
-    <p>Normalerweise reichen App-Version, Gerätemodell, Android-Version und eine Beschreibung des Problems. Wenn du einen Logcat-Ausschnitt sendest, prüfe ihn bitte vorher auf Informationen, die du nicht weitergeben möchtest.</p>
-  </details>
-
-  <h2>Datenschutz</h2>
-  <p>Informationen über lokale Speicherung, Standort, Google Maps, Wetterabfragen, GitHub-Datenupdates und Google Play Billing findest du in der <a href="privacy.html">Datenschutzerklärung von FreizeitPass</a>.</p>
+  <details><summary>Ist FreizeitPass eine offizielle App des Freizeitticket Tirol?</summary><p>Nein. FreizeitPass ist ein unabhängiges privates Hobbyprojekt und steht in keiner Verbindung zu den Betreibern des Freizeitticket Tirol. Verbindlich sind die offiziellen Angaben des Ticketanbieters und der jeweiligen Betriebe.</p></details>
+  <details><summary>Warum sehe ich Werbung?</summary><p>Die kostenlose Version finanziert sich teilweise über Google-AdMob-Banner. Ein Banner kann ganz unten auf der Startseite sowie nach jeweils 12 Einträgen in den Listen „Einrichtungen“ und „Vorteile/Bonuspartner“ erscheinen. FreizeitPass Pro ist vollständig werbefrei.</p></details>
+  <details><summary>Wann erscheint die Werbe-/Datenschutzabfrage?</summary><p>Bei einer Neuinstallation siehst du zuerst den FreizeitPass-Willkommensscreen. Erst nach „Los geht’s“ aktualisiert die App über Googles User Messaging Platform (UMP) den Einwilligungsstatus und zeigt – falls für deine Region erforderlich – den Google-Consentdialog.</p></details>
+  <details><summary>Wie kann ich meine Werbeeinwilligung später ändern?</summary><p>Wenn Google für deine Region einen erneuten Zugriff auf Datenschutzoptionen vorsieht, findest du ihn in FreizeitPass unter <strong>Mehr → Werbung &amp; Datenschutz → Werbeeinwilligung</strong>. Zusätzlich kannst du Geräte- und Google-Werbeeinstellungen in Android bzw. deinem Google-Konto verwalten.</p></details>
+  <details><summary>Warum sehe ich trotz Free-Version keine Werbung?</summary><p>Das kann vorkommen, wenn noch keine Werbefreigabe vorliegt, keine Anzeige verfügbar ist, die Netzwerkverbindung fehlt oder Google für den konkreten Aufruf keine Anzeige ausliefert. Die App-Funktionen bleiben davon unabhängig.</p></details>
+  <details><summary>Warum benötigt die App meinen Standort?</summary><p>Die Standortberechtigung ist optional und wird für Entfernungssortierung, Standortanzeige und Navigation verwendet. Ohne Standortberechtigung bleibt FreizeitPass nutzbar; standortbezogene Komfortfunktionen sind dann eingeschränkt.</p></details>
+  <details><summary>Wo werden meine Besuche, Ticketprofile und Fotos gespeichert?</summary><p>Diese Daten werden grundsätzlich lokal auf deinem Gerät gespeichert. Abhängig von deinen Android-/Google-Backup-Einstellungen kann Android App-Daten zusätzlich im Systembackup sichern. Details stehen in der <a href="privacy.html">Datenschutzerklärung</a>.</p></details>
+  <details><summary>Wie lösche ich meine Daten?</summary><p>Du kannst persönliche bzw. alle App-Daten in FreizeitPass zurücksetzen. Alternativ kannst du in Android den App-Speicher löschen oder die App deinstallieren.</p></details>
+  <details><summary>Die Karte lädt nicht.</summary><p>Prüfe Internetverbindung und Google Play-Dienste. Bei selbst installierten Test-Builds kann zusätzlich die Google-Maps-API-Schlüsselkonfiguration bzw. der SHA-1-Fingerabdruck der verwendeten Signatur relevant sein. Bei einer aus Google Play installierten Version sollte der Play-App-Signing-Fingerabdruck für den Maps-Key zugelassen sein.</p></details>
+  <details><summary>Die Entfernung zu Einrichtungen wird nicht angezeigt.</summary><p>Prüfe Android → Einstellungen → Apps → FreizeitPass → Berechtigungen und erlaube den Standort. Zusätzlich müssen die Standortdienste des Geräts aktiviert sein.</p></details>
+  <details><summary>Benachrichtigungen funktionieren nicht.</summary><p>Prüfe, ob Benachrichtigungen für FreizeitPass erlaubt sind. Manche Hersteller beschränken Hintergrundarbeit zusätzlich über Akkuoptimierungen. Morgen-Tipp und Pro-Ausflugserinnerungen können in der App getrennt konfiguriert werden.</p></details>
+  <details><summary>Wie stelle ich einen Pro-Kauf wieder her?</summary><p>Öffne FreizeitPass → Mehr und wähle „Käufe wiederherstellen“. Verwende dasselbe Google-Konto wie beim ursprünglichen Kauf.</p></details>
+  <details><summary>Warum schlägt der Pro-Kauf fehl?</summary><p>In-App-Käufe werden über Google Play abgewickelt. Prüfe Internetverbindung, Play-Store-Konto und Produktverfügbarkeit. Bei Testversionen muss die App über den vorgesehenen Google-Play-Testkanal installiert sein.</p></details>
+  <details><summary>Wie werden Einrichtungen und Vorteilspartner aktualisiert?</summary><p>Die App enthält lokale Grunddaten und kann aktualisierte Stammdaten online laden. Persönliche Besuchsdaten bleiben davon unabhängig.</p></details>
+  <details><summary>Warum stimmen Preise oder Öffnungszeiten nicht?</summary><p>Daten können sich jederzeit ändern. FreizeitPass versucht, sie aktuell zu halten, kann aber keine Gewähr übernehmen. Verbindlich sind die offiziellen Angaben des Betriebs bzw. Ticketanbieters.</p></details>
+  <h2>Datenschutz</h2><p>Informationen über lokale Speicherung, Standort, Google Maps, Wetter, GitHub-Datenupdates, Google Play Billing sowie Google AdMob/UMP findest du in der <a href="privacy.html">Datenschutzerklärung</a>.</p>
 </section>
 
 <section class="lang lang-en">
   <h2>Contact</h2>
-  <div class="contact">
-    <div class="card">
-      <h3>Email support</h3>
-      <a href="mailto:lemmidevpixelcraft@gmail.com?subject=FreizeitPass%20Support">lemmidevpixelcraft@gmail.com</a>
-    </div>
-    <div class="card">
-      <h3>Developer</h3>
-      Simon Außerlechner<br>
-      Siedlerweg 17<br>
-      6402 Hatting, Austria
-    </div>
-  </div>
-
-  <p>If you are reporting a technical issue, the following information usually helps reproduce it more quickly:</p>
-  <ul>
-    <li>FreizeitPass version,</li>
-    <li>Android version and device model,</li>
-    <li>a short description of the steps leading to the issue,</li>
-    <li>if possible, a screenshot or relevant Logcat excerpt.</li>
-  </ul>
-  <p class="muted">Please do not send passwords, payment details or other unnecessary sensitive information.</p>
-
+  <div class="contact"><div class="card"><h3>Email support</h3><a href="mailto:lemmidevpixelcraft@gmail.com?subject=FreizeitPass%20Support">lemmidevpixelcraft@gmail.com</a></div><div class="card"><h3>Developer</h3>Simon Außerlechner<br>Siedlerweg 17<br>6402 Hatting, Austria</div></div>
+  <p>For technical issues, please include the app version, Android version, device model, a short step-by-step description and, where possible, a screenshot or relevant Logcat excerpt.</p><p class="muted">Please do not send passwords, payment details or other unnecessary sensitive information.</p>
   <h2>Frequently asked questions</h2>
-
-  <details>
-    <summary>Is FreizeitPass an official Freizeitticket Tirol app?</summary>
-    <p>No. FreizeitPass is an independent private utility and is not affiliated with, authorised by or sponsored by the operators of Freizeitticket Tirol. Official prices, benefits, opening hours and conditions published by the ticket provider and participating businesses are authoritative.</p>
-  </details>
-
-  <details>
-    <summary>Why does the app request my location?</summary>
-    <p>Location permission is optional and is used for sorting by distance, showing your position and navigation. FreizeitPass remains usable without location permission; only location-based convenience features are limited.</p>
-  </details>
-
-  <details>
-    <summary>Where are my visits, ticket profiles and photos stored?</summary>
-    <p>This information is generally stored locally on your device. Depending on your Android/Google backup settings, the operating system may additionally include app data in Android system backup. See the <a href="privacy.html">Privacy Policy</a> for details.</p>
-  </details>
-
-  <details>
-    <summary>How can I delete my data?</summary>
-    <p>FreizeitPass provides options in Settings to reset personal data or all app data. You can also clear the app's storage in Android settings or uninstall FreizeitPass.</p>
-  </details>
-
-  <details>
-    <summary>Distances to facilities are not shown.</summary>
-    <p>Check Android → Settings → Apps → FreizeitPass → Permissions and make sure location access is allowed. Device location services must also be enabled.</p>
-  </details>
-
-  <details>
-    <summary>Notifications do not work.</summary>
-    <p>First check whether Android allows notifications for FreizeitPass. Some manufacturers additionally restrict background tasks through battery optimisation. The free morning tip and Pro trip reminders can be configured separately inside the app.</p>
-  </details>
-
-  <details>
-    <summary>How do I restore a Pro purchase?</summary>
-    <p>Open FreizeitPass Settings and select “Restore purchases”. Use the same Google Account that was used for the original Google Play purchase.</p>
-  </details>
-
-  <details>
-    <summary>Why does a Pro purchase fail or show as unavailable?</summary>
-    <p>In-app purchases are processed entirely by Google Play. Check your internet connection, Play Store account and availability of the app/product in your country. For test versions, the app must be installed through the relevant Google Play test track.</p>
-  </details>
-
-  <details>
-    <summary>How are facilities and benefit partners updated?</summary>
-    <p>The app includes local seed data and can download updated master data online. If a manual update fails, FreizeitPass should show a status or error message. Your personal visit data is independent of these master-data updates.</p>
-  </details>
-
-  <details>
-    <summary>Why is a price or opening time incorrect?</summary>
-    <p>Facility, price, opening-hour and benefit information can change at any time. FreizeitPass aims to keep the information useful but cannot guarantee its accuracy. Only the official information from the relevant business or ticket provider is authoritative.</p>
-  </details>
-
-  <details>
-    <summary>What information should I include in a support request?</summary>
-    <p>Usually the app version, device model, Android version and a description of the issue are sufficient. If you send a Logcat excerpt, please review it first and remove any information you do not want to share.</p>
-  </details>
-
-  <h2>Privacy</h2>
-  <p>For information about local storage, location, Google Maps, weather requests, GitHub data updates and Google Play Billing, see the <a href="privacy.html">FreizeitPass Privacy Policy</a>.</p>
+  <details><summary>Is FreizeitPass an official Freizeitticket Tirol app?</summary><p>No. FreizeitPass is an independent private hobby project and is not affiliated with the operators of Freizeitticket Tirol. Official information from the ticket provider and participating businesses is authoritative.</p></details>
+  <details><summary>Why do I see ads?</summary><p>The free version is partly supported by Google AdMob banners. A banner may appear at the bottom of the Home screen and after every 12 entries in the Facilities and Benefits/Bonus Partners lists. FreizeitPass Pro is completely ad-free.</p></details>
+  <details><summary>When does the advertising/privacy consent screen appear?</summary><p>On a fresh installation, the FreizeitPass welcome screen appears first. Only after “Get started” does the app use Google's User Messaging Platform (UMP) to update consent information and, where required for your region, show the Google consent message.</p></details>
+  <details><summary>How can I change my ad privacy choices later?</summary><p>Where Google requires a later privacy-options entry point, it is available under <strong>More → Ads &amp; privacy → Ad privacy choices</strong>. You can also manage device and Google ad settings through Android and your Google Account.</p></details>
+  <details><summary>Why are no ads visible in the free version?</summary><p>This may happen when ad permission is not yet available, no ad inventory is available, the network is offline, or Google does not return an ad for that request. App functionality is unaffected.</p></details>
+  <details><summary>Why does the app request location?</summary><p>Location permission is optional and is used for distance sorting, showing your position and navigation. FreizeitPass remains usable without it.</p></details>
+  <details><summary>Where are visits, ticket profiles and photos stored?</summary><p>They are generally stored locally on your device. Depending on Android/Google backup settings, Android may additionally include app data in system backup. See the <a href="privacy.html">Privacy Policy</a>.</p></details>
+  <details><summary>How do I delete my data?</summary><p>You can reset personal/all app data in FreizeitPass, clear app storage in Android settings, or uninstall the app.</p></details>
+  <details><summary>The map does not load.</summary><p>Check internet access and Google Play services. For self-installed test builds, Google Maps API key restrictions and the SHA-1 fingerprint of the signing certificate may also matter. For Google Play installs, the Play App Signing certificate fingerprint should be allowed for the Maps key.</p></details>
+  <details><summary>Distances to facilities are not shown.</summary><p>Check Android → Settings → Apps → FreizeitPass → Permissions and allow location. Device location services must also be enabled.</p></details>
+  <details><summary>Notifications do not work.</summary><p>Make sure Android allows notifications for FreizeitPass. Some manufacturers additionally restrict background tasks through battery optimisation.</p></details>
+  <details><summary>How do I restore Pro?</summary><p>Open FreizeitPass → More and choose “Restore purchases”, using the same Google Account as the original purchase.</p></details>
+  <details><summary>Why does a Pro purchase fail?</summary><p>Purchases are handled by Google Play. Check your internet connection, Play Store account and product availability. Test builds must be installed through the relevant Google Play test track.</p></details>
+  <details><summary>How are facilities and benefit partners updated?</summary><p>The app includes local seed data and can download updated public master data online. Your personal visit data is independent of these updates.</p></details>
+  <details><summary>Why is a price or opening time incorrect?</summary><p>Information may change at any time. FreizeitPass aims to keep data useful but cannot guarantee accuracy. Official information from the relevant business/ticket provider is authoritative.</p></details>
+  <h2>Privacy</h2><p>Details about local storage, location, Google Maps, weather, GitHub data updates, Google Play Billing and Google AdMob/UMP are available in the <a href="privacy.html">Privacy Policy</a>.</p>
 </section>
-</article>
-</div>
-</main>
-
-<footer>
-  <div class="wrap">
-    <div class="links">
-      <a href="privacy.html">Datenschutz / Privacy</a>
-      <a href="mailto:lemmidevpixelcraft@gmail.com">lemmidevpixelcraft@gmail.com</a>
-    </div>
-    <p>© 2026 Simon Außerlechner · FreizeitPass</p>
-  </div>
-</footer>
-
+</article></div></main>
+<footer><div class="wrap"><div class="links"><a href="privacy.html">Datenschutz / Privacy</a><a href="mailto:lemmidevpixelcraft@gmail.com">lemmidevpixelcraft@gmail.com</a></div><p>© 2026 Simon Außerlechner · FreizeitPass</p></div></footer>
 <script>
-function setLang(lang) {
-  document.documentElement.lang = lang;
-  document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('.lang-' + lang).forEach(el => el.classList.add('active'));
-  document.getElementById('deBtn').classList.toggle('active', lang === 'de');
-  document.getElementById('enBtn').classList.toggle('active', lang === 'en');
-  try { localStorage.setItem('freizeitpass-lang', lang); } catch (_) {}
-}
-(function () {
-  let lang = 'de';
-  try {
-    const saved = localStorage.getItem('freizeitpass-lang');
-    if (saved) lang = saved;
-    else lang = (navigator.language || '').toLowerCase().startsWith('de') ? 'de' : 'en';
-  } catch (_) {
-    lang = (navigator.language || '').toLowerCase().startsWith('de') ? 'de' : 'en';
-  }
-  setLang(lang);
-})();
+function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('.lang').forEach(e=>e.classList.remove('active'));document.querySelectorAll('.lang-'+lang).forEach(e=>e.classList.add('active'));document.getElementById('deBtn').classList.toggle('active',lang==='de');document.getElementById('enBtn').classList.toggle('active',lang==='en');try{localStorage.setItem('freizeitpass-lang',lang)}catch(_){}}
+(function(){let lang=(navigator.language||'').toLowerCase().startsWith('de')?'de':'en';try{lang=localStorage.getItem('freizeitpass-lang')||lang}catch(_){}setLang(lang)})();
 </script>
-</body>
-</html>
+</body></html>
