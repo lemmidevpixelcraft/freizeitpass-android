@@ -14,10 +14,11 @@
 </head>
 <body>
 <header><div class="wrap"><div class="hero">
-  <div class="lang lang-de active"><h1>Datenschutzerklärung</h1><p class="sub">für die Android-App <strong>FreizeitPass</strong></p><p class="meta">Stand: 8. September 2026</p></div>
-  <div class="lang lang-en"><h1>Privacy Policy</h1><p class="sub">for the Android app <strong>FreizeitPass</strong></p><p class="meta">Last updated: 8 September 2026</p></div>
+  <div class="lang lang-de active"><h1>Datenschutzerklärung</h1><p class="sub">für die Android-App <strong>FreizeitPass</strong></p><p class="meta">Stand: 30. Oktober 2026</p></div>
+  <div class="lang lang-en"><h1>Privacy Policy</h1><p class="sub">for the Android app <strong>FreizeitPass</strong></p><p class="meta">Last updated: 30 October 2026</p></div>
   <div class="toolbar"><button id="deBtn" class="active" onclick="setLang('de')">Deutsch</button><button id="enBtn" onclick="setLang('en')">English</button><a class="button" href="support.html">Support</a></div>
 </div></div></header>
+
 <main><div class="wrap"><article>
 <section class="lang lang-de active">
   <p>Diese Datenschutzerklärung beschreibt, wie die Android-App <strong>FreizeitPass</strong> mit personenbezogenen Daten und Gerätedaten umgeht. FreizeitPass ist ein unabhängiges privates Hobbyprojekt und keine offizielle App der Betreiber des Freizeitticket Tirol.</p>
@@ -29,37 +30,49 @@
   <p>FreizeitPass benötigt kein Benutzerkonto. Persönliche App-Inhalte wie Besuche, Ticketprofile, Ersparnisse, geplante Ausflüge, Notizen, eigene Fotos und Einstellungen werden grundsätzlich lokal auf deinem Android-Gerät gespeichert. Der Entwickler betreibt keine eigene Benutzer- oder Profildatenbank.</p>
   <div class="grid">
     <div class="card"><strong>Kein Benutzerkonto</strong>Keine Registrierung und kein FreizeitPass-Login.</div>
-    <div class="card"><strong>Werbung nur in Free</strong>Die kostenlose Version zeigt Google-AdMob-Banner. FreizeitPass Pro ist werbefrei.</div>
+    <div class="card"><strong>Werbung nur in Free</strong>Die kostenlose Version zeigt Google-AdMob-Native-Ads. FreizeitPass Pro ist werbefrei.</div>
     <div class="card"><strong>Keine eigene Analytics-Plattform</strong>FreizeitPass betreibt kein eigenes Analytics- oder Tracking-System. Das Google Mobile Ads SDK verarbeitet jedoch technische Daten für Werbung, Analyse und Betrugsprävention.</div>
     <div class="card"><strong>Kein Verkauf von Daten</strong>Der Entwickler verkauft keine personenbezogenen Daten.</div>
   </div>
 
   <h2>3. Lokal gespeicherte Daten</h2>
-  <ul><li>Ticketprofile, Ticketpreise und Saisonangaben,</li><li>Besuche, Ersparnisse und Begleitpersonen,</li><li>geplante Ausflüge und Notizen,</li><li>von dir ausgewählte eigene Fotos,</li><li>App-, Sprach-, Darstellungs- und Benachrichtigungseinstellungen,</li><li>lokal zwischengespeicherte Einrichtungs- und Vorteilspartnerdaten.</li></ul>
+  <ul>
+    <li>Ticketprofile, Ticketpreise und Saisonangaben,</li>
+    <li>Besuche, Ersparnisse und Begleitpersonen,</li>
+    <li>geplante Ausflüge und Notizen,</li>
+    <li>von dir ausgewählte eigene Fotos,</li>
+    <li>App-, Sprach-, Darstellungs-, Filter- und Benachrichtigungseinstellungen,</li>
+    <li>lokal zwischengespeicherte Einrichtungs-, Vorteilspartner- und Wetterdaten.</li>
+  </ul>
   <p>Diese persönlichen Inhalte werden nicht automatisch an den Entwickler übertragen.</p>
-  <h3>Android-Systembackup</h3><p>Abhängig von deinen Android-/Google-Konto-Einstellungen kann Android Teile lokaler App-Daten im Systembackup sichern und bei einer Neuinstallation wiederherstellen. Dies wird von Android bzw. Google gesteuert und ist kein FreizeitPass-Cloud-Dienst.</p>
+  <h3>Android-Systembackup</h3>
+  <p>Abhängig von deinen Android-/Google-Konto-Einstellungen kann Android Teile lokaler App-Daten im Systembackup sichern und bei einer Neuinstallation wiederherstellen. Dies wird von Android bzw. Google gesteuert und ist kein FreizeitPass-Cloud-Dienst.</p>
 
   <h2>4. Standortdaten</h2>
-  <p>Die Standortberechtigung ist optional und wird für Entfernungssortierung, Standortanzeige, Karten- und Navigationsfunktionen verwendet. Der aktuelle Gerätestandort wird nicht in einer eigenen FreizeitPass-Serverdatenbank gespeichert. Google Play-Dienste und Google Maps können im Rahmen dieser Funktionen Geräte-, Netzwerk-, Nutzungs- und Standortinformationen verarbeiten. Die Standortberechtigung kann jederzeit in Android entzogen werden.</p>
+  <p>Die Standortberechtigung ist optional und wird für Entfernungssortierung, Standortanzeige, Karten-, Wetter- und Navigationsfunktionen verwendet. Der aktuelle Gerätestandort wird nicht in einer eigenen FreizeitPass-Serverdatenbank gespeichert. Google Play-Dienste und Google Maps können im Rahmen dieser Funktionen Geräte-, Netzwerk-, Nutzungs- und Standortinformationen verarbeiten. Die Standortberechtigung kann jederzeit in Android entzogen werden.</p>
 
-  <h2>5. Wettervorhersage</h2>
-  <p>Für Wetterfunktionen werden die Koordinaten der ausgewählten Einrichtung bzw. des geplanten Ausflugs und erforderliche Abfrageparameter per HTTPS an <code>openweather.servebeer.com</code> übertragen. Wie bei Internetzugriffen üblich, erhält der Server technisch auch IP-Adresse und Verbindungsmetadaten.</p>
+  <h2>5. Wettervorhersage über Google Weather API</h2>
+  <p>FreizeitPass nutzt für Wetterfunktionen die <strong>Google Maps Platform Weather API</strong>. Dafür werden die Koordinaten der ausgewählten Einrichtung, des geplanten Ausflugs oder – bei standortbezogenen Wetterfunktionen – des verwendeten Standorts sowie erforderliche Abfrageparameter per HTTPS an Google übertragen. Wie bei Internetzugriffen üblich, erhält Google technisch unter anderem die IP-Adresse und Verbindungsmetadaten.</p>
+  <p>FreizeitPass betreibt für Wetterabfragen keinen eigenen Wetter-Proxy und speichert die übertragenen Abfragen nicht auf einem eigenen Server. Zur technischen Absicherung der API-Anfragen können zusätzlich der App-Paketname und der Fingerabdruck des installierten Signaturzertifikats an Google übermittelt werden.</p>
+  <p>Wetterdaten und daraus abgeleitete Empfehlungen können lokal zwischengespeichert werden. Weitere Informationen zur Datenverarbeitung durch Google findest du in der <a href="https://policies.google.com/privacy?hl=de" rel="noopener noreferrer">Google-Datenschutzerklärung</a>.</p>
 
   <h2>6. Online-Aktualisierung der Einrichtungs- und Vorteilspartnerdaten</h2>
   <p>Öffentliche Stammdaten können von <code>raw.githubusercontent.com</code> geladen werden. Persönliche FreizeitPass-Inhalte werden dabei nicht an GitHub übertragen. GitHub kann beim Abruf technisch unter anderem IP-Adresse, Zeitpunkt und angeforderte Ressource verarbeiten.</p>
 
   <h2>7. Google Maps und Google Play-Dienste</h2>
-  <p>FreizeitPass nutzt Google Maps und Google Play Location Services. Informationen zur Verarbeitung durch Google findest du in der <a href="https://policies.google.com/privacy?hl=de" rel="noopener noreferrer">Google-Datenschutzerklärung</a>.</p>
+  <p>FreizeitPass nutzt Google Maps, Google Play Location Services sowie weitere Google-Play-Dienste für Karten-, Standort-, Kauf-, Update- und Bewertungsfunktionen. Informationen zur Verarbeitung durch Google findest du in der <a href="https://policies.google.com/privacy?hl=de" rel="noopener noreferrer">Google-Datenschutzerklärung</a>.</p>
 
   <h2>8. Werbung mit Google AdMob und Einwilligung über UMP</h2>
-  <p>Die kostenlose Version von FreizeitPass zeigt Bannerwerbung über <strong>Google AdMob</strong>. Banner können <strong>ganz unten auf der Startseite</strong> sowie in den Listen <strong>„Einrichtungen“</strong> und <strong>„Vorteile/Bonuspartner“</strong> nach jeweils 12 Einträgen erscheinen. <strong>FreizeitPass Pro ist vollständig werbefrei.</strong></p>
+  <p>Die kostenlose Version von FreizeitPass zeigt <strong>Native Ads</strong> über <strong>Google AdMob</strong>. Anzeigen können auf der Startseite in den Inhalt eingebettet sowie in längeren Listen wie <strong>„Einrichtungen“</strong> und <strong>„Vorteile/Bonuspartner“</strong> zwischen Einträgen erscheinen. <strong>FreizeitPass Pro ist vollständig werbefrei.</strong></p>
+  <p>Native Ads können Bild-/Medieninhalte, App- bzw. Anbieterinformationen und eine Aktionsfläche enthalten und werden als Werbung bzw. Anzeige gekennzeichnet. Die App kann Anzeigen vorladen, damit sie beim Scrollen schneller verfügbar sind.</p>
   <p>Beim ersten Start wird zunächst der FreizeitPass-Willkommensscreen gezeigt. Erst danach aktualisiert die App über die <strong>Google User Messaging Platform (UMP)</strong> den Einwilligungsstatus und zeigt – soweit für Region und Konfiguration erforderlich – eine Datenschutz-/Einwilligungsnachricht. Werbeanfragen werden erst gestartet, wenn UMP meldet, dass Werbung angefordert werden darf (<code>canRequestAds()</code>).</p>
   <p>Wenn Google für deine Region einen späteren Einstieg in die Datenschutzoptionen verlangt, findest du ihn in der App unter <strong>Mehr → Werbung &amp; Datenschutz → Werbeeinwilligung</strong>. Dort kannst du verfügbare Werbe- und Datenschutzoptionen erneut aufrufen.</p>
   <p>Nach den Angaben von Google kann das Google Mobile Ads SDK automatisch Daten wie <strong>IP-Adresse</strong> (unter anderem zur ungefähren Standortbestimmung), <strong>Interaktionen mit App und Werbung</strong>, <strong>Diagnose-/Leistungsinformationen</strong> sowie <strong>Geräte- und Kontokennungen</strong> (z. B. Werbe-ID oder App-Set-ID, soweit verfügbar und zulässig) für Werbung, Analyse und Betrugsprävention erheben und teilen. Daten werden bei der Übertragung verschlüsselt. Ob personalisierte, nicht personalisierte oder eingeschränkte Anzeigen ausgespielt werden, hängt unter anderem von Einwilligung, Region, Geräteeinstellungen und den Vorgaben von Google ab.</p>
   <p>Weitere Informationen: <a href="https://policies.google.com/privacy?hl=de" rel="noopener noreferrer">Google-Datenschutzerklärung</a> und <a href="https://policies.google.com/technologies/ads?hl=de" rel="noopener noreferrer">Google – Werbung und Daten</a>.</p>
 
-  <h2>9. In-App-Käufe über Google Play</h2>
+  <h2>9. Google Play: Käufe, Updates und Bewertungen</h2>
   <p>Der optionale Pro-Einmalkauf wird über Google Play Billing abgewickelt. Zahlungsdaten werden nicht an FreizeitPass oder den Entwickler übermittelt. Die App erhält nur die zur Produktanzeige, Kaufprüfung, Wiederherstellung und Freischaltung erforderlichen Informationen.</p>
+  <p>FreizeitPass kann über Google Play prüfen, ob eine neuere App-Version verfügbar ist, und – wenn unterstützt – einen In-App-Update-Dialog anzeigen. Zusätzlich kann die App den offiziellen Google-Play-Bewertungsdialog anfordern. Diese Funktionen werden von Google Play bereitgestellt; FreizeitPass erhält dabei keine Bewertungstexte und keine Zahlungsdaten.</p>
 
   <h2>10. Benachrichtigungen</h2>
   <p>Lokale Benachrichtigungen können für Morgen-Tipp und Pro-Ausflugserinnerungen verwendet werden. Sie werden lokal über Android WorkManager geplant; FreizeitPass betreibt keinen eigenen Push-Server.</p>
@@ -74,54 +87,127 @@
   <p>Bei Nutzung entsprechender Funktionen können Daten insbesondere an Google und GitHub übermittelt werden. Diese Anbieter betreiben Infrastruktur weltweit; eine Verarbeitung außerhalb der EU/des EWR ist daher möglich. Es gelten die jeweiligen Datenschutzinformationen und rechtlichen Transfermechanismen der Anbieter.</p>
 
   <h2>14. Speicherdauer und Löschung</h2>
-  <ul><li><strong>Lokale App-Daten:</strong> bis zur Löschung in der App, zum Zurücksetzen der App-Daten oder zur Deinstallation.</li><li><strong>Android-Backup:</strong> nach deinen Android-/Google-Backup-Einstellungen.</li><li><strong>Werbe-/Google-Daten:</strong> nach den für die jeweilige Google-Verarbeitung geltenden Aufbewahrungsregeln und Einstellungen.</li><li><strong>Technische Serverdaten:</strong> nur so lange, wie dies für Betrieb, Sicherheit und Fehleranalyse erforderlich ist.</li></ul>
+  <ul>
+    <li><strong>Lokale App-Daten:</strong> bis zur Löschung in der App, zum Zurücksetzen der App-Daten oder zur Deinstallation.</li>
+    <li><strong>Android-Backup:</strong> nach deinen Android-/Google-Backup-Einstellungen.</li>
+    <li><strong>Werbe-/Google-Daten:</strong> nach den für die jeweilige Google-Verarbeitung geltenden Aufbewahrungsregeln und Einstellungen.</li>
+    <li><strong>Technische Serverdaten bei Drittanbietern:</strong> nach den jeweiligen Aufbewahrungsregeln der Anbieter.</li>
+  </ul>
 
-  <h2>15. Datensicherheit</h2><p>Netzwerkverbindungen zu den beschriebenen Diensten erfolgen grundsätzlich über HTTPS/TLS. Ein absoluter Schutz bei elektronischer Datenverarbeitung kann dennoch nicht garantiert werden.</p>
+  <h2>15. Datensicherheit</h2>
+  <p>Netzwerkverbindungen zu den beschriebenen Diensten erfolgen grundsätzlich über HTTPS/TLS. API-Schlüssel werden technisch beschränkt, soweit dies der jeweilige Dienst unterstützt. Ein absoluter Schutz bei elektronischer Datenverarbeitung kann dennoch nicht garantiert werden.</p>
 
   <h2>16. Deine Rechte nach der DSGVO</h2>
   <p>Soweit die gesetzlichen Voraussetzungen vorliegen, bestehen insbesondere Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch und Widerruf einer Einwilligung für die Zukunft. Datenschutzanfragen kannst du an <a href="mailto:lemmidevpixelcraft@gmail.com">lemmidevpixelcraft@gmail.com</a> richten. Du kannst dich außerdem an die <a href="https://dsb.gv.at/" rel="noopener noreferrer">Österreichische Datenschutzbehörde</a> wenden.</p>
 
-  <h2>17. Kinder und Familien</h2><p>FreizeitPass verlangt kein Benutzerkonto und fragt kein Alter ab. Eltern bzw. Erziehungsberechtigte sollten Android-Berechtigungen, Werbe-/Datenschutzoptionen und Geräteeinstellungen bei von Kindern verwendeten Geräten entsprechend verwalten.</p>
+  <h2>17. Kinder und Familien</h2>
+  <p>FreizeitPass verlangt kein Benutzerkonto und fragt kein Alter ab. Eltern bzw. Erziehungsberechtigte sollten Android-Berechtigungen, Werbe-/Datenschutzoptionen und Geräteeinstellungen bei von Kindern verwendeten Geräten entsprechend verwalten.</p>
 
-  <h2>18. Hosting dieser Seite</h2><p>Diese Seite wird über GitHub Pages bereitgestellt. GitHub verarbeitet beim Abruf technisch notwendige Verbindungsdaten. Weitere Informationen: <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub Privacy Statement</a>.</p>
+  <h2>18. Hosting dieser Seite</h2>
+  <p>Diese Seite wird über GitHub Pages bereitgestellt. GitHub verarbeitet beim Abruf technisch notwendige Verbindungsdaten. Weitere Informationen: <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub Privacy Statement</a>.</p>
 
-  <h2>19. Änderungen dieser Datenschutzerklärung</h2><p>Diese Datenschutzerklärung wird angepasst, wenn sich App-Funktionen, SDKs, Dienste oder rechtliche Anforderungen ändern.</p>
+  <h2>19. Änderungen dieser Datenschutzerklärung</h2>
+  <p>Diese Datenschutzerklärung wird angepasst, wenn sich App-Funktionen, SDKs, Dienste oder rechtliche Anforderungen ändern.</p>
   <div class="notice"><strong>Hinweis:</strong> Die Angaben beschreiben die aktuelle technische Implementierung. Die Angaben in Google Plays Bereich „Datensicherheit“ müssen zusätzlich mit der tatsächlich veröffentlichten App-Version und den jeweils aktuellen SDK-Angaben übereinstimmen.</div>
 </section>
 
 <section class="lang lang-en">
   <p>This Privacy Policy explains how the Android app <strong>FreizeitPass</strong> handles personal and device data. FreizeitPass is an independent private hobby project and is not an official app of the operators of Freizeitticket Tirol.</p>
-  <h2>1. Controller</h2><p><strong>Simon Außerlechner</strong><br>Siedlerweg 17<br>6402 Hatting<br>Austria<br>Email: <a href="mailto:lemmidevpixelcraft@gmail.com">lemmidevpixelcraft@gmail.com</a></p>
-  <h2>2. General principle</h2><p>FreizeitPass does not require a user account. Personal app content such as visits, ticket profiles, savings, planned trips, notes, your own photos and settings is generally stored locally on your Android device. The developer does not operate a separate user/profile database.</p>
-  <div class="grid"><div class="card"><strong>No user account</strong>No registration or FreizeitPass login.</div><div class="card"><strong>Ads only in Free</strong>The free version displays Google AdMob banners. FreizeitPass Pro is ad-free.</div><div class="card"><strong>No developer analytics platform</strong>FreizeitPass does not operate its own analytics/tracking system. The Google Mobile Ads SDK does process technical data for advertising, analytics and fraud prevention.</div><div class="card"><strong>No sale of data</strong>The developer does not sell personal data.</div></div>
-  <h2>3. Data stored locally</h2><ul><li>ticket profiles, prices and season information,</li><li>visits, savings and companions,</li><li>planned trips and notes,</li><li>your selected personal photos,</li><li>app, language, appearance and notification settings,</li><li>cached facility and benefit-partner data.</li></ul><p>This personal content is not automatically transmitted to the developer.</p>
-  <h3>Android system backup</h3><p>Depending on your Android/Google Account settings, Android may include parts of local app data in system backup and restore them after reinstallation. This is controlled by Android/Google and is not a FreizeitPass cloud service.</p>
-  <h2>4. Location data</h2><p>Location permission is optional and is used for distance sorting, location display, maps and navigation. Current device location is not stored in a developer-operated FreizeitPass server database. Google Play services and Google Maps may process device, network, usage and location information for these features.</p>
-  <h2>5. Weather forecast</h2><p>Weather requests send the coordinates of the selected facility/planned trip and required request parameters via HTTPS to <code>openweather.servebeer.com</code>. As with ordinary internet access, the server technically receives the IP address and connection metadata.</p>
-  <h2>6. Online facility and benefit-partner updates</h2><p>Public master data may be downloaded from <code>raw.githubusercontent.com</code>. Personal FreizeitPass content is not sent to GitHub. GitHub may technically process the IP address, request time and requested resource.</p>
-  <h2>7. Google Maps and Google Play services</h2><p>FreizeitPass uses Google Maps and Google Play Location Services. See the <a href="https://policies.google.com/privacy?hl=en" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
-  <h2>8. Google AdMob advertising and UMP consent</h2><p>The free version of FreizeitPass displays banner advertising using <strong>Google AdMob</strong>. Banners may appear <strong>at the bottom of the Home screen</strong> and after every 12 entries in the <strong>Facilities</strong> and <strong>Benefits/Bonus Partners</strong> lists. <strong>FreizeitPass Pro is completely ad-free.</strong></p>
+
+  <h2>1. Controller</h2>
+  <p><strong>Simon Außerlechner</strong><br>Siedlerweg 17<br>6402 Hatting<br>Austria<br>Email: <a href="mailto:lemmidevpixelcraft@gmail.com">lemmidevpixelcraft@gmail.com</a></p>
+
+  <h2>2. General principle</h2>
+  <p>FreizeitPass does not require a user account. Personal app content such as visits, ticket profiles, savings, planned trips, notes, your own photos and settings is generally stored locally on your Android device. The developer does not operate a separate user/profile database.</p>
+  <div class="grid">
+    <div class="card"><strong>No user account</strong>No registration or FreizeitPass login.</div>
+    <div class="card"><strong>Ads only in Free</strong>The free version displays Google AdMob native ads. FreizeitPass Pro is ad-free.</div>
+    <div class="card"><strong>No developer analytics platform</strong>FreizeitPass does not operate its own analytics/tracking system. The Google Mobile Ads SDK does process technical data for advertising, analytics and fraud prevention.</div>
+    <div class="card"><strong>No sale of data</strong>The developer does not sell personal data.</div>
+  </div>
+
+  <h2>3. Data stored locally</h2>
+  <ul>
+    <li>ticket profiles, prices and season information,</li>
+    <li>visits, savings and companions,</li>
+    <li>planned trips and notes,</li>
+    <li>your selected personal photos,</li>
+    <li>app, language, appearance, filter and notification settings,</li>
+    <li>cached facility, benefit-partner and weather data.</li>
+  </ul>
+  <p>This personal content is not automatically transmitted to the developer.</p>
+  <h3>Android system backup</h3>
+  <p>Depending on your Android/Google Account settings, Android may include parts of local app data in system backup and restore them after reinstallation. This is controlled by Android/Google and is not a FreizeitPass cloud service.</p>
+
+  <h2>4. Location data</h2>
+  <p>Location permission is optional and is used for distance sorting, location display, maps, weather and navigation. Current device location is not stored in a developer-operated FreizeitPass server database. Google Play services and Google Maps may process device, network, usage and location information for these features.</p>
+
+  <h2>5. Weather forecast via Google Weather API</h2>
+  <p>FreizeitPass uses the <strong>Google Maps Platform Weather API</strong> for weather features. The coordinates of the selected facility, planned trip or – for location-based weather features – the location being used, together with required request parameters, are transmitted to Google over HTTPS. As with ordinary internet access, Google technically receives information such as the IP address and connection metadata.</p>
+  <p>FreizeitPass does not operate its own weather proxy for these requests and does not store weather requests on a developer-operated server. To help secure API requests, the app package name and fingerprint of the installed signing certificate may also be transmitted to Google.</p>
+  <p>Weather information and derived recommendations may be cached locally. See the <a href="https://policies.google.com/privacy?hl=en" rel="noopener noreferrer">Google Privacy Policy</a> for more information.</p>
+
+  <h2>6. Online facility and benefit-partner updates</h2>
+  <p>Public master data may be downloaded from <code>raw.githubusercontent.com</code>. Personal FreizeitPass content is not sent to GitHub. GitHub may technically process the IP address, request time and requested resource.</p>
+
+  <h2>7. Google Maps and Google Play services</h2>
+  <p>FreizeitPass uses Google Maps, Google Play Location Services and other Google Play services for maps, location, purchases, updates and review features. See the <a href="https://policies.google.com/privacy?hl=en" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+
+  <h2>8. Google AdMob advertising and UMP consent</h2>
+  <p>The free version of FreizeitPass displays <strong>native ads</strong> using <strong>Google AdMob</strong>. Ads may be embedded in Home content and between entries in longer lists such as <strong>Facilities</strong> and <strong>Benefits/Bonus Partners</strong>. <strong>FreizeitPass Pro is completely ad-free.</strong></p>
+  <p>Native ads may contain media, app or advertiser information and a call-to-action area and are labelled as advertising. The app may preload ads so they are available more quickly while scrolling.</p>
   <p>On first launch, FreizeitPass shows its welcome screen first. Only afterwards does the app use the <strong>Google User Messaging Platform (UMP)</strong> to update consent information and, where required for the user's region/configuration, display a privacy/consent message. Ad requests start only when UMP reports that ads may be requested (<code>canRequestAds()</code>).</p>
   <p>Where Google requires a persistent privacy-options entry point, it is available in the app under <strong>More → Ads &amp; privacy → Ad privacy choices</strong>.</p>
   <p>According to Google, the Google Mobile Ads SDK may automatically collect/share data such as <strong>IP address</strong> (which can be used to estimate general location), <strong>app/ad interactions</strong>, <strong>diagnostic/performance information</strong>, and <strong>device/account identifiers</strong> (for example advertising ID or app set ID where available and permitted) for advertising, analytics and fraud prevention. Data is encrypted in transit. Personalised, non-personalised or limited ad delivery depends on consent, region, device settings and Google's requirements.</p>
   <p>More information: <a href="https://policies.google.com/privacy?hl=en" rel="noopener noreferrer">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads?hl=en" rel="noopener noreferrer">Google – Advertising and data</a>.</p>
-  <h2>9. In-app purchases via Google Play</h2><p>The optional Pro one-time purchase is processed through Google Play Billing. Payment details are not transmitted to FreizeitPass or the developer. The app receives only the information required to display products, verify/restore purchases and unlock Pro.</p>
-  <h2>10. Notifications</h2><p>Local notifications may be used for the morning tip and Pro trip reminders. They are scheduled locally with Android WorkManager; FreizeitPass does not operate its own push server.</p>
-  <h2>11. External links, navigation and sharing</h2><p>When opening external websites, navigation apps or sharing targets, the selected third party's privacy terms apply. Such transfers are initiated by your action.</p>
-  <h2>12. Purposes and legal bases</h2><p>Depending on the feature, processing may rely in particular on Art. 6(1)(b) GDPR (requested functionality), Art. 6(1)(a) GDPR (consent where required), and Art. 6(1)(f) GDPR (secure/stable operation and abuse prevention where applicable). Where legally required, advertising/personalisation consent is collected through UMP. Google may also process data under its own responsibility and terms.</p>
-  <h2>13. Recipients and international transfers</h2><p>Relevant features may transmit information to Google and GitHub. These providers operate infrastructure globally, so processing outside the EU/EEA may occur. Their privacy notices and transfer safeguards apply.</p>
-  <h2>14. Retention and deletion</h2><ul><li><strong>Local app data:</strong> until deleted/reset or the app is uninstalled.</li><li><strong>Android backup:</strong> according to your Android/Google backup settings.</li><li><strong>Advertising/Google data:</strong> according to the retention rules/settings applicable to the relevant Google processing.</li><li><strong>Technical server data:</strong> only as long as necessary for operation, security and troubleshooting.</li></ul>
-  <h2>15. Data security</h2><p>Network connections to the described services generally use HTTPS/TLS. Absolute security cannot be guaranteed for electronic data processing.</p>
-  <h2>16. Your GDPR rights</h2><p>Where legal requirements are met, you may have rights to access, rectification, erasure, restriction, portability, objection and withdrawal of consent for the future. Privacy requests: <a href="mailto:lemmidevpixelcraft@gmail.com">lemmidevpixelcraft@gmail.com</a>. In Austria you may also contact the <a href="https://dsb.gv.at/" rel="noopener noreferrer">Austrian Data Protection Authority</a>.</p>
-  <h2>17. Children and families</h2><p>FreizeitPass does not require an account and does not ask for age. Parents/guardians should manage Android permissions, ad/privacy choices and device settings appropriately on devices used by children.</p>
-  <h2>18. Hosting of this page</h2><p>This page is hosted using GitHub Pages. GitHub processes technically necessary connection data when the page is opened. See the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub Privacy Statement</a>.</p>
-  <h2>19. Changes</h2><p>This Privacy Policy may be updated when app features, SDKs, services or legal requirements change.</p>
+
+  <h2>9. Google Play: purchases, updates and reviews</h2>
+  <p>The optional Pro one-time purchase is processed through Google Play Billing. Payment details are not transmitted to FreizeitPass or the developer. The app receives only the information required to display products, verify/restore purchases and unlock Pro.</p>
+  <p>FreizeitPass may use Google Play to check whether a newer app version is available and, where supported, show an in-app update flow. The app may also request Google's official in-app review dialog. These features are provided by Google Play; FreizeitPass does not receive review text or payment details from them.</p>
+
+  <h2>10. Notifications</h2>
+  <p>Local notifications may be used for the morning tip and Pro trip reminders. They are scheduled locally with Android WorkManager; FreizeitPass does not operate its own push server.</p>
+
+  <h2>11. External links, navigation and sharing</h2>
+  <p>When opening external websites, navigation apps or sharing targets, the selected third party's privacy terms apply. Such transfers are initiated by your action.</p>
+
+  <h2>12. Purposes and legal bases</h2>
+  <p>Depending on the feature, processing may rely in particular on Art. 6(1)(b) GDPR (requested functionality), Art. 6(1)(a) GDPR (consent where required), and Art. 6(1)(f) GDPR (secure/stable operation and abuse prevention where applicable). Where legally required, advertising/personalisation consent is collected through UMP. Google may also process data under its own responsibility and terms.</p>
+
+  <h2>13. Recipients and international transfers</h2>
+  <p>Relevant features may transmit information to Google and GitHub. These providers operate infrastructure globally, so processing outside the EU/EEA may occur. Their privacy notices and transfer safeguards apply.</p>
+
+  <h2>14. Retention and deletion</h2>
+  <ul>
+    <li><strong>Local app data:</strong> until deleted/reset or the app is uninstalled.</li>
+    <li><strong>Android backup:</strong> according to your Android/Google backup settings.</li>
+    <li><strong>Advertising/Google data:</strong> according to the retention rules/settings applicable to the relevant Google processing.</li>
+    <li><strong>Technical server data at third parties:</strong> according to the provider's applicable retention rules.</li>
+  </ul>
+
+  <h2>15. Data security</h2>
+  <p>Network connections to the described services generally use HTTPS/TLS. API keys are technically restricted where supported by the relevant service. Absolute security cannot be guaranteed for electronic data processing.</p>
+
+  <h2>16. Your GDPR rights</h2>
+  <p>Where legal requirements are met, you may have rights to access, rectification, erasure, restriction, portability, objection and withdrawal of consent for the future. Privacy requests: <a href="mailto:lemmidevpixelcraft@gmail.com">lemmidevpixelcraft@gmail.com</a>. In Austria you may also contact the <a href="https://dsb.gv.at/" rel="noopener noreferrer">Austrian Data Protection Authority</a>.</p>
+
+  <h2>17. Children and families</h2>
+  <p>FreizeitPass does not require an account and does not ask for age. Parents/guardians should manage Android permissions, ad/privacy choices and device settings appropriately on devices used by children.</p>
+
+  <h2>18. Hosting of this page</h2>
+  <p>This page is hosted using GitHub Pages. GitHub processes technically necessary connection data when the page is opened. See the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub Privacy Statement</a>.</p>
+
+  <h2>19. Changes</h2>
+  <p>This Privacy Policy may be updated when app features, SDKs, services or legal requirements change.</p>
   <div class="notice"><strong>Note:</strong> This page describes the current technical implementation. Google Play Data safety declarations must additionally match the actual published app version and current SDK disclosures.</div>
 </section>
 </article></div></main>
+
 <footer><div class="wrap"><div class="links"><a href="support.html">Support</a><a href="mailto:lemmidevpixelcraft@gmail.com">lemmidevpixelcraft@gmail.com</a></div><p>© 2026 Simon Außerlechner · FreizeitPass</p></div></footer>
+
 <script>
 function setLang(lang){document.documentElement.lang=lang;document.querySelectorAll('.lang').forEach(e=>e.classList.remove('active'));document.querySelectorAll('.lang-'+lang).forEach(e=>e.classList.add('active'));document.getElementById('deBtn').classList.toggle('active',lang==='de');document.getElementById('enBtn').classList.toggle('active',lang==='en');try{localStorage.setItem('freizeitpass-lang',lang)}catch(_){}}
 (function(){let lang=(navigator.language||'').toLowerCase().startsWith('de')?'de':'en';try{lang=localStorage.getItem('freizeitpass-lang')||lang}catch(_){}setLang(lang)})();
 </script>
-</body></html>
+</body>
+</html>
